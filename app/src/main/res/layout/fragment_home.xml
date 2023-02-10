@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/card_home"
+    tools:context=".view.HomeFragment">
+
+        <RelativeLayout
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txtSaldo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:fontFamily="@font/poppins_medium"
+                android:textSize="30sp"
+                android:textColor="@color/black"
+                android:textStyle="bold">
+            </TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/current_balance"
+                android:fontFamily="@font/poppins_medium"
+                android:layout_below="@id/txtSaldo"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:textStyle="bold">
+            </TextView>
+
+        </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/topUp"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/shape_topup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_centerInParent="true"
+            android:text="Top Up"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/poppins_medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp">
+
+            <RelativeLayout
+                android:id="@+id/card_transaction_history"
+                android:layout_width="wrap_content"
+                android:layout_height="270dp"
+                android:layout_marginStart="30dp"
+                android:background="@drawable/shape_card">
+
+                <ImageView
+                    android:id="@+id/image_transfer_balance"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="25dp"
+                    android:background="@drawable/icon_money_transfer">
+
+                </ImageView>
+
+                <LinearLayout
+                    android:padding="5dp"
+                    android:id="@+id/transferbalance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/image_transfer_balance"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/transaction"
+                        android:fontFamily="@font/poppins_semi"
+                        android:textColor="@color/orange"
+                        android:textSize="20sp"
+                        android:textStyle="bold">
+                    </TextView>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/history"
+                        android:fontFamily="@font/poppins_semi"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:layout_marginStart="4dp"
+                        android:textStyle="bold">
+                    </TextView>
+                </LinearLayout>
+
+
+                <TextView
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/transferbalance"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:fontFamily="@font/poppins_light"
+                    android:text="@string/transaction_history_desc"
+                    android:textAlignment="center">
+
+                </TextView>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/card_promo"
+                android:layout_width="wrap_content"
+                android:layout_height="270dp"
+                android:background="@drawable/shape_card"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="40dp">
+
+                <ImageView
+                    android:id="@+id/image_promo"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:background="@drawable/ic_scan_qr"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="25dp">
+                </ImageView>
+
+                <LinearLayout
+                    android:id="@+id/promo"
+                    android:padding="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_below="@id/image_promo"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="My"
+                        android:fontFamily="@font/poppins_semi"
+                        android:textSize="20sp"
+                        android:textColor="@color/birumuda"
+                        android:textStyle="bold">
+
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="QR"
+                        android:fontFamily="@font/poppins_semi"
+                        android:textSize="20sp"
+                        android:textColor="@color/black"
+                        android:textStyle="bold">
+                    </TextView>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/poppins_light"
+                    android:text="@string/my_qr_code"
+                    android:layout_below="@+id/promo"
+                    android:layout_centerHorizontal="true"
+                    android:textAlignment="center">
+                </TextView>
+            </RelativeLayout>
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+</RelativeLayout>

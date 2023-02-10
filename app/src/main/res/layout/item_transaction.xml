@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="8dp"
+    android:elevation="4dp"
+    android:layout_marginBottom="5dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/transactionId"
+            android:fontFamily="@font/poppins_medium"
+            android:text="ID-Trans : 01"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_below="@+id/transactionId"
+            android:id="@+id/transactionTime"
+            android:fontFamily="@font/poppins_semi"
+            android:text="2021-07-22 14:53:58"
+            android:textSize="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_alignParentRight="true"
+            android:fontFamily="@font/poppins_medium"
+            android:id="@+id/amount"
+            android:text="+ Rp 56000"
+            android:textColor="@color/orange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_alignParentRight="true"
+            android:id="@+id/transactionType"
+            android:layout_below="@+id/amount"
+            android:fontFamily="@font/poppins_medium"
+            android:text="topup"
+            android:textColor="@color/birudongker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_topup"
+    tools:context=".view.TransferActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/transfer_balance"
+        android:textColor="@color/white"
+        android:layout_marginTop="35dp"
+        android:layout_marginStart="30dp"
+        android:fontFamily="@font/poppins_semi"
+        android:textSize="20sp"/>
+
+    <LinearLayout
+        android:id="@+id/tulis"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="140dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp">
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/icon_money_transfer"
+            android:layout_gravity="center_vertical">
+        </ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/transfer_your_balance_to_a_friend_here"
+            android:textColor="@color/black"
+            android:layout_marginStart="20dp"
+            android:fontFamily="@font/poppins_medium"
+            android:textSize="16sp"
+            android:layout_gravity="center_vertical">
+
+        </TextView>
+
+    </LinearLayout>
+    <androidx.cardview.widget.CardView
+        android:layout_centerInParent="true"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="5dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:backgroundTint="@color/birudongker"
+        android:layout_width="match_parent"
+        android:layout_height="260dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/txttop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/fill_out_the_amount"
+                android:textSize="20sp"
+                android:layout_marginTop="40dp"
+                android:layout_marginStart="40dp"
+                android:textColor="@color/orange"
+                android:fontFamily="@font/poppins_semi">
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="below"
+                android:layout_toEndOf="@id/txttop"
+                android:textSize="20sp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="40dp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/poppins_semi">
+            </TextView>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/inputTopup"
+                android:layout_marginBottom="30dp"
+                style="@style/TextInput"
+                android:layout_below="@+id/txttop"
+                app:boxBackgroundColor="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/birudongker"
+                android:textColorHint="@color/black">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/amountTransfer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/white"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:layout_marginStart="5dp"
+                    android:inputType="number"
+                    android:maxLines="1">
+                </com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:layout_marginRight="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/inputTopup"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnCancel"
+                    android:text="@string/cancel"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppins_medium"
+                    android:backgroundTint="@color/white"
+                    app:cornerRadius="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnSend"
+                    android:layout_marginLeft="20dp"
+                    android:text="Send"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/poppins_medium"
+                    android:backgroundTint="@color/orange"
+                    app:cornerRadius="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
